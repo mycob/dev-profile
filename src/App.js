@@ -147,6 +147,17 @@ const App = () => {
                   routes for. */}
             {/*<Route path="*" element={<NoMatch />} />*/}
         </Routes>
+
+        <hr style={{ marginTop: '30vh' }} />
+
+        <Typography align='center' sx={{ marginTop: 5, marginBottom: 2.5}}>
+          The website is built with React, Javascript, Material UI, Material Icon, and Firebase for hosting.
+        </Typography>
+
+        <Typography align='center' sx={{ marginBottom: 20 }}>
+          2015 - { new Date().getFullYear() }
+        </Typography>
+
       </Box>
     </Box>
   )
