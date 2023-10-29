@@ -18,12 +18,61 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#title-name {
+  text-align: center;
+}
+
+#subtitle {
+  text-align: center;
+  color: grey;
 }
 
 .link {
   text-decoration: none;
   color: black;
+}
+
+.bio-links {
+  text-decoration: none;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.link-item:hover {
+  background-color: rgb(51, 118, 203, 1.0);
+  color: white;
+}
+
+.projects-link-item:hover {
+  background-color: rgb(145, 55, 170, 1.0);
+  color: white;
+}
+
+#work-list {
+  list-style-type: none;
+}
+
+#work-list li {
+  margin-bottom: 5px;
+}
+
+#work-list li a {
+  text-decoration: none;
+  color: rgb(51, 118, 203, 1.0);
+}
+
+.funily-images {
+  max-height: 800;
+}
+
+#manage-it-list {
+  list-style-type: ">> ";
+}
+
+@media (min-width: 1205px ) {
+  .approve-it-images {
+    width: 1000px !important;
+  }
 }
