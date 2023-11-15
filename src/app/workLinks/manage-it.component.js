@@ -32,8 +32,9 @@ const ManageItComponent = (props) => {
 				A multi-faceted digital solution designed to improve workflows for school districts and meet Illinois state compliance requiremetns for managing applications.
 			</Typography>
 			<li>
-				<a className="no-decoration" href="https://manage-it.app/home" target="_blank">Website</a>
+				<a className="no-decoration" href="https://manage-it.app/home" target="_blank">Website
 				<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+				</a>
 			</li>
 
 			<hr />

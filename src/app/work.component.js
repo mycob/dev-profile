@@ -20,21 +20,31 @@ const WorkComponent = () => {
 		>
 			<Typography id='work' variant='h4'>Work</Typography>
 			<ul id='work-list'>
-								<li>
-					2017-2019 | <a href='/funily'>Funily</a>
-				<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+				<li>
+					2023-Present | <a href='/teach-with-ai'>Teach w/ AI
+					<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					</a>
+				
 				</li>
 				<li>
-					2019-2023 | <a href='/approve-it'>Approve iT</a>
-				<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					2014-Present | <a href='/app-script'>Google AppScript Developer
+					<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					</a>
 				</li>
 				<li>
-					2019-2023 | <a href='/manage-it'>Manage iT</a>
-				<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					2019-2023 | <a href='/manage-it'>Manage iT
+					<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					</a>
 				</li>
 				<li>
-					2014-Present | <a href='/app-script'>Google AppScript Developer</a>
-				<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					2019-2023 | <a href='/approve-it'>Approve iT
+					<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					</a>
+				</li>
+				<li>
+					2017-2019 | <a href='/funily'>Funily
+					<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
+					</a>
 				</li>
 			</ul>
 			

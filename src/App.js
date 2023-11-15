@@ -9,6 +9,7 @@ import ApproveItComponent from './app/workLinks/approve-it.component';
 import ManageItComponent from './app/workLinks/manage-it.component';
 import FunilyComponent from './app/workLinks/funily.component';
 import AppScriptComponent from './app/workLinks/appscript.component';
+import TeachWithAIComponent from './app/workLinks/teach-w-ai.component';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -141,6 +142,7 @@ const App = () => {
             <Route path="/approve-it" element={<ApproveItComponent updatePage={setPage} />} />
             <Route path="/manage-it" element={<ManageItComponent updatePage={setPage} />} />
             <Route path="/app-script" element={<AppScriptComponent updatePage={setPage} />} />
+            <Route path="/teach-w-ai" element={<TeachWithAIComponent updatePage={setPage} />} />
 
             {/* Using path="*"" means "match anything", so this route
                   acts like a catch-all for URLs that we don't have explicit
