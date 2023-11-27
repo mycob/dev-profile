@@ -47,6 +47,9 @@ const TeachWithAIComponent = (props) => {
 				<Grid item xs={4}>
 		          <Item>NextJS</Item>
 		        </Grid>
+				<Grid item xs={4}>
+		          <Item>OpenAI</Item>
+		        </Grid>
 		        <Grid item xs={4}>
 		          <Item>React</Item>
 		        </Grid>
@@ -54,7 +57,7 @@ const TeachWithAIComponent = (props) => {
 		          <Item>NodeJS</Item>
 		        </Grid>
 				<Grid item xs={3}>
-		          <Item>Material UI</Item>
+		          <Item>Tailwind CSS</Item>
 		        </Grid>
 		        <Grid item xs={3}>
 		          <Item>React Context</Item>

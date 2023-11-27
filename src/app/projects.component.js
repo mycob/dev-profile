@@ -27,7 +27,7 @@ const ProjectsComponent = (props) => {
 		<Box 
 			sx={{ flexGrow: 1, marginTop: 5, marginBottom: 5 }}
 		>
-			<Typography id='work' variant='h4'gutterBottom>Projects</Typography>
+			<Typography id='work' variant='h4'gutterBottom>freeCodeCamp Projects</Typography>
 
 			<Typography gutterBottom sx={{ marginBottom: 2.5 }}>
 				Javascript, HTML, & CSS practice projects.

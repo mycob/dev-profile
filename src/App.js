@@ -142,7 +142,7 @@ const App = () => {
             <Route path="/approve-it" element={<ApproveItComponent updatePage={setPage} />} />
             <Route path="/manage-it" element={<ManageItComponent updatePage={setPage} />} />
             <Route path="/app-script" element={<AppScriptComponent updatePage={setPage} />} />
-            <Route path="/teach-w-ai" element={<TeachWithAIComponent updatePage={setPage} />} />
+            <Route path="/teach-with-ai" element={<TeachWithAIComponent updatePage={setPage} />} />
 
             {/* Using path="*"" means "match anything", so this route
                   acts like a catch-all for URLs that we don't have explicit

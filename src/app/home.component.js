@@ -31,14 +31,14 @@ const HomeComponent = () => {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<Typography variant="h4" align='center' >Mike Berago</Typography>
-			<Typography variant='h5' align='center' gutterBottom>Web and Mobile Software Engineer</Typography>
+			<Typography variant='h5' align='center' gutterBottom>Web and Mobile Software Developer</Typography>
 
 			<Grid container spacing={2} style={{ marginBottom: 20}}>
 		        <Grid item xs={4}>
 		          <a className='bio-links' href="https://github.com/mycoberago" target="_blank"><Item className='link-item'>GitHub</Item></a>
 		        </Grid>
 		        <Grid item xs={4}>
-		          <a className='bio-links' href="" target="_blank"><Item className='link-item'>Linkedin</Item></a>
+		          <a className='bio-links' href="https://www.linkedin.com/in/mikeberago/" target="_blank"><Item className='link-item'>Linkedin</Item></a>
 		        </Grid>
 		        <Grid item xs={4}>
 		          <a className='bio-links' href="mailto:mycoberago@gmail.com" target="_blank"><Item className='link-item'>Contact</Item></a>
