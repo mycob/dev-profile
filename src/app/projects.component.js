@@ -36,7 +36,7 @@ const ProjectsComponent = (props) => {
 			<Grid spacing={2} container justifyContent="center">
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
 					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
-						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Calculator App</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
 						</Item>
@@ -44,7 +44,7 @@ const ProjectsComponent = (props) => {
 				</Grid>
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
 					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
-						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Promodoro Clock</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
 						</Item>
@@ -52,7 +52,7 @@ const ProjectsComponent = (props) => {
 				</Grid>
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
 					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
-						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Quote Generator</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
 						</Item>
@@ -60,7 +60,7 @@ const ProjectsComponent = (props) => {
 				</Grid>
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
 					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
-						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Tic Tac Toe</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
 						</Item>

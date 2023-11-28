@@ -10,6 +10,7 @@ import ManageItComponent from './app/workLinks/manage-it.component';
 import FunilyComponent from './app/workLinks/funily.component';
 import AppScriptComponent from './app/workLinks/appscript.component';
 import TeachWithAIComponent from './app/workLinks/teach-w-ai.component';
+import CertsComponent from './app/certificates.component';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -77,6 +78,14 @@ const App = () => {
           </ListItem>
           <Divider />
           <ListItem >
+            <Link to="/certs" className="link">
+              <ListItemButton onClick={() => toggleDrawer('Certs')}>
+                <ListItemText primary="Certifications" />
+              </ListItemButton>
+            </Link>
+          </ListItem>
+          <Divider />
+          <ListItem >
             <Link to="/projects" className="link">
               <ListItemButton onClick={() => toggleDrawer('Projects')}>
                 <ListItemText primary="Projects" />
@@ -105,8 +114,7 @@ const App = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             { 
               page === "Home" ? "Home" 
-                : page === "work" ? "Mike Berago | Work" 
-                : page === 'projects' ? "Mike Berago | Projects" 
+                : page === "Work" ? "Mike Berago | 10 Years of Experience" 
                 : "Mike Berago" 
             }
           </Typography>
@@ -137,6 +145,7 @@ const App = () => {
             <Route path="/" element={<HomeComponent />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="/work" element={<WorkComponent />} />
+            <Route path="/certs" element={<CertsComponent />} />
             <Route path="/projects" element={<ProjectsComponent updatePage={setPage} />} />
             <Route path="/funily" element={<FunilyComponent updatePage={setPage} />} />
             <Route path="/approve-it" element={<ApproveItComponent updatePage={setPage} />} />

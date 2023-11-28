@@ -8,6 +8,7 @@ import '../App.css';
 import AboutComponent from './about.component';
 import WorkComponent from './work.component';
 import ProjectsComponent from './projects.component';
+import CertsComponent from './certificates.component';
 
 
 const HomeComponent = () => {
@@ -48,6 +49,8 @@ const HomeComponent = () => {
 		      <AboutComponent />
 
 		      <WorkComponent />
+
+			  <CertsComponent />
 
 			  <ProjectsComponent />
 

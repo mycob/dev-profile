@@ -29,11 +29,20 @@ const CertsComponent = (props) => {
 		>
 			<Typography id='work' variant='h4'gutterBottom>Certifications</Typography>
 
-			<Grid spacing={2} container justifyContent="center">
+			<Grid spacing={2} container justifyContent="start">
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
 					<a className="no-decoration" href="https://www.freecodecamp.org/certification/mycoberago/javascript-algorithms-and-data-structures" target="_blank">
 						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black' }}>
 							<Typography>Javascript Algorithms & Data Structures </Typography>
+							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
+						</Item>
+					</a>
+				</Grid>
+
+				<Grid item xs={3} sx={{ minWidth: 200 }}>
+					<a className="no-decoration" href="https://www.freecodecamp.org/certification/mycoberago/responsive-web-design" target="_blank">
+						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black' }}>
+							<Typography>Responsive Web Design</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
 						</Item>
 					</a>
