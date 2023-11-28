@@ -43,7 +43,7 @@ const ProjectsComponent = (props) => {
 					</a>
 				</Grid>
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
-					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
+					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/GoEOeQ" target="_blank">
 						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Promodoro Clock</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
@@ -51,7 +51,7 @@ const ProjectsComponent = (props) => {
 					</a>
 				</Grid>
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
-					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
+					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/MKmPmQ" target="_blank">
 						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Quote Generator</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
@@ -59,7 +59,7 @@ const ProjectsComponent = (props) => {
 					</a>
 				</Grid>
 				<Grid item xs={3} sx={{ minWidth: 200 }}>
-					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/obWKGd" target="_blank">
+					<a className="no-decoration" href="https://codepen.io/mikeberago/pen/VrNXgG" target="_blank">
 						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'darkslategray' }}>
 							<Typography>Tic Tac Toe</Typography>
 							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
