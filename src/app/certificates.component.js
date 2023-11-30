@@ -47,6 +47,15 @@ const CertsComponent = (props) => {
 						</Item>
 					</a>
 				</Grid>
+
+				<Grid item xs={3} sx={{ minWidth: 200 }}>
+					<a className="no-decoration" href="https://www.freecodecamp.org/certification/mycoberago/back-end-development-and-apis" target="_blank">
+						<Item className="projects-link-item" sx={{ minHeight: 100, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black' }}>
+							<Typography>Back End Development & APIs</Typography>
+							<OpenInNewIcon sx={{ fontSize: "1.25em", marginLeft: 0.5 }} />
+						</Item>
+					</a>
+				</Grid>
 				
 			</Grid>
 			
