@@ -1,18 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Box from '@mui/material/Box';
 import '../App.css';
 
 const WorkComponent = () => {
-
-	const [ loading, setLoading ] = useState(false);
-
-	useEffect(() => {
-		
-		
-
-	},[]);
 
 	return (
 		<Box 

@@ -27,6 +27,12 @@
   color: grey;
 }
 
+.speed-dial {
+  position: fixed;
+  bottom: 10vh;
+  right: 5vw;
+}
+
 .link {
   text-decoration: none;
   color: black;
@@ -43,11 +49,19 @@
 .link-item:hover {
   background-color: rgb(51, 118, 203, 1.0);
   color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px lightgray;
+  transition: all;
+  transition-duration: 600ms;
 }
 
 .projects-link-item:hover {
   background-color: rgb(145, 55, 170, 1.0);
   color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px lightgray;
+  transition: all;
+  transition-duration: 600ms;
 }
 
 #work-list {

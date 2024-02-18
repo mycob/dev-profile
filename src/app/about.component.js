@@ -1,16 +1,8 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 const AboutComponent = () => {
-
-	const [ loading, setLoading ] = useState(false);
-
-	useEffect(() => {
-		
-		
-
-	},[]);
 
 	return (
 		<Box
@@ -18,19 +10,15 @@ const AboutComponent = () => {
 		>
 			<Typography id="about" variant='h4' gutterBottom>About</Typography>
 			<Typography style={{marginBottom: '12px'}} gutterBottom>
-			I am a school administrator who, a decade ago, discovered a love for software development. Over the years, I have seamlessly merged my educational background with the dynamic world of technology. As an advocate for innovation in education, I've dedicated myself to crafting software solutions that enhance the learning experience.
+			I am software developer with a decade of experience specializing in web application development. My journey began with a deep curiosity for coding, leading me to master technologies like VanillaJs React/NextJs, NodeJs, Firebase, Google Cloud Functions, and Google Appscript.
 			</Typography>
 
 			<Typography style={{marginBottom: '12px'}} gutterBottom>
-			In pursuit of this vision, I founded Approve iT, LLC, an entity committed to developing Software as a Service products for school districts.  My goal was to create services that were affordable to schools that made real impact.  I leveraged React, NodeJS, Firebase, and Google Cloud to create robust and user-friendly solutions tailored for educational institutions.
+			While I lean more towards front end development--my expertise spans the entire development stack, allowing me to architect end-to-end solutions. From frontend intricacies with React to server-side logic in NodeJS, and leveraging cloud services like Firebase and Google Cloud Functions--I bring a comprehensive skillset to create seamless and innovative user experiences. I'm dedicated to staying ahead of industry trends, ensuring my work not only meets but surpasses current standards.
 			</Typography>
 
 			<Typography style={{marginBottom: '12px'}} gutterBottom>
-			I have worked in all phases of software development (infrastructure, backend, front end, mobile), however I gravitate more with great confidence when working on the front end.
-			</Typography>
-
-			<Typography style={{marginBottom: '12px'}} gutterBottom>
-			I am seeking a collaborative team where I can apply my expertise in software development to create impactful and user-friendly solutions. I aim to contribute my strong teamwork and leadership skills in situations where they are most beneficial.
+			I thrive in collaborative environments where diverse perspectives converge to craft exceptional solutions. Beyond writing code, I believe in the power of technology to make a lasting impact. Whether you're looking to collaborate on a project, seeking advice, or just want to discuss the latest tech trends, I'm always open to connecting with fellow developers and enthusiasts. Let's build something great together!
 			</Typography>
 
 		</Box>

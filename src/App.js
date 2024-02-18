@@ -1,163 +1,113 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
-import { Routes, Route, Outlet, Link } from "react-router-dom";
-import HomeComponent from './app/home.component';
-import AboutComponent from './app/about.component';
-import WorkComponent from './app/work.component';
-import ProjectsComponent from './app/projects.component';
-import ApproveItComponent from './app/workLinks/approve-it.component';
-import ManageItComponent from './app/workLinks/manage-it.component';
-import FunilyComponent from './app/workLinks/funily.component';
-import AppScriptComponent from './app/workLinks/appscript.component';
-import TeachWithAIComponent from './app/workLinks/teach-w-ai.component';
-import CertsComponent from './app/certificates.component';
+import { Routes, Route, useNavigate} from "react-router-dom";
+import Loader from './app/loader.component';
+const HeaderComponent = lazy(() => import('./app/header.component'));
+const HomeComponent = lazy(() => import('./app/home.component'));
+const AboutComponent = lazy(() => import('./app/about.component'));
+const WorkComponent = lazy(() => import('./app/work.component'));
+const ProjectsComponent = lazy(() => import('./app/projects.component'));
+const ApproveItComponent = lazy(() => import('./app/workLinks/approve-it.component'));
+const ManageItComponent = lazy(() => import('./app/workLinks/manage-it.component'));
+const FunilyComponent = lazy(() => import('./app/workLinks/funily.component'));
+const AppScriptComponent = lazy(() => import('./app/workLinks/appscript.component'));
+const TeachWithAIComponent = lazy(() => import('./app/workLinks/teach-w-ai.component'));
+const CertsComponent = lazy(() => import('./app/certificates.component'));
 
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import CssBaseline from '@mui/material/CssBaseline';
-
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import WorkIcon from '@mui/icons-material/Work';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 //node 12.18.3
 
-const App = () => {
+const actions = [
+  { icon: <HomeIcon />, name: 'Home' },
+  { icon: <InfoIcon />,name: 'About' },
+  { icon: <WorkIcon />,name: 'Work' },
+  { icon: <LocalLibraryIcon />,name: 'Certs' },
+  { icon: <AccountTreeIcon />,name: 'Projects' },
+];
 
-  const [ loading, setLoading ] = useState(false);
-  const [ page, setPage ] = useState('Home');
-  const [ drawerOpen, setDrawer ] = useState(false);
+const App = (props) => {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    
-    
-
-  },[]);
-
-  const toggleDrawer = (selectedPage=page) => {
-    setPage(selectedPage);
-    setDrawer(!drawerOpen);
+  const handleRoute = (route) => {
+    if(route === 'Home') {
+      return navigate('/');
+    }
+    navigate(`/${route.toLowerCase()}`)
   }
-
-  const list = () => (
-    <Box
-      sx={{ width: 150 }}
-      role="presentation"
-    >
-      <List>
-          <ListItem >
-            <Link to="/" className="link">
-              <ListItemButton onClick={() => toggleDrawer('Home')}>
-                <ListItemText primary="Home" />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <Divider />
-          <ListItem >
-            <Link to="about" className="link">
-              <ListItemButton onClick={() => toggleDrawer('About')}>
-                <ListItemText primary="About" />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <Divider />
-          <ListItem >
-            <Link to="/work" className="link">
-              <ListItemButton onClick={() => toggleDrawer('Work')}>
-                <ListItemText primary="Work" />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <Divider />
-          <ListItem >
-            <Link to="/certs" className="link">
-              <ListItemButton onClick={() => toggleDrawer('Certs')}>
-                <ListItemText primary="Certifications" />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-          <Divider />
-          <ListItem >
-            <Link to="/projects" className="link">
-              <ListItemButton onClick={() => toggleDrawer('Projects')}>
-                <ListItemText primary="Projects" />
-              </ListItemButton>
-            </Link>
-          </ListItem>
-      </List>
-
-    </Box>
-  );
 
   return (
     <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
-      <AppBar component='nav'>
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={ () => toggleDrawer(page) }
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            { 
-              page === "Home" ? "Home" 
-                : page === "Work" ? "Mike Berago | 10 Years of Experience" 
-                : "Mike Berago" 
-            }
-          </Typography>
-        </Toolbar>
-      </AppBar>
-
-      <CssBaseline />
-     
-      <React.Fragment>
-        <Drawer
-          open={drawerOpen}
-          onClose={() => toggleDrawer(page)}
-        >
-         { list() }
-        </Drawer>
-      </React.Fragment>
 
       <Box 
         component='main' 
         sx={{ 
-          marginTop: '12vh', 
+          marginTop: '5vh', 
           maxWidth: 1000, 
           marginLeft: 2, 
           marginRight: 2
         }}
       >
-        <Routes>
-            <Route path="/" element={<HomeComponent />} />
-            <Route path="/about" element={<AboutComponent />} />
-            <Route path="/work" element={<WorkComponent />} />
-            <Route path="/certs" element={<CertsComponent />} />
-            <Route path="/projects" element={<ProjectsComponent updatePage={setPage} />} />
-            <Route path="/funily" element={<FunilyComponent updatePage={setPage} />} />
-            <Route path="/approve-it" element={<ApproveItComponent updatePage={setPage} />} />
-            <Route path="/manage-it" element={<ManageItComponent updatePage={setPage} />} />
-            <Route path="/app-script" element={<AppScriptComponent updatePage={setPage} />} />
-            <Route path="/teach-with-ai" element={<TeachWithAIComponent updatePage={setPage} />} />
+        <Suspense fallback={<Loader />}>
+         <HeaderComponent />
+        </Suspense>
 
-            {/* Using path="*"" means "match anything", so this route
-                  acts like a catch-all for URLs that we don't have explicit
-                  routes for. */}
-            {/*<Route path="*" element={<NoMatch />} />*/}
+        <Routes>
+            <Route path="/" 
+              element={<Suspense fallback={<Loader />}><HomeComponent /></Suspense>} 
+            />
+            <Route path="/about" 
+              element={<Suspense fallback={<Loader />}><AboutComponent /></Suspense>}
+            />
+            <Route path="/work" 
+              element={<Suspense fallback={<Loader />}><WorkComponent /></Suspense>} 
+            />
+            <Route path="/certs" 
+              element={<Suspense fallback={<Loader />}><CertsComponent /></Suspense>}
+            />
+            <Route path="/projects" 
+              element={<Suspense fallback={<Loader />}><ProjectsComponent updatePage={handleRoute} /></Suspense>} 
+            />
+            <Route path="/funily" 
+              element={<Suspense fallback={<Loader />}><FunilyComponent updatePage={handleRoute} /></Suspense>} 
+            />
+            <Route path="/approve-it" 
+              element={<Suspense fallback={<Loader />}><ApproveItComponent updatePage={handleRoute} /></Suspense>} 
+            />
+            <Route path="/manage-it" 
+              element={<Suspense fallback={<Loader />}><ManageItComponent updatePage={handleRoute} /></Suspense>} 
+            />
+            <Route path="/app-script" 
+              element={<Suspense fallback={<Loader />}><AppScriptComponent updatePage={handleRoute} /></Suspense>} 
+            />
+            <Route path="/teach-with-ai" 
+              element={<Suspense fallback={<Loader />}><TeachWithAIComponent updatePage={handleRoute} /></Suspense>} 
+            />
         </Routes>
+
+        <SpeedDial
+          ariaLabel="SpeedDial basic example"
+          className='speed-dial'
+          // sx={{ position: 'absolute', bottom: 16, right: 16 }}
+          icon={<SpeedDialIcon />}
+        >
+          {actions.map((action) => (
+            <SpeedDialAction
+              onClick={()=> handleRoute(action.name)}
+              key={action.name}
+              icon={action.icon}
+              tooltipTitle={action.name}
+            />
+          ))}
+        </SpeedDial>
 
         <hr style={{ marginTop: '30vh' }} />
 
