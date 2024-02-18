@@ -96,8 +96,15 @@ const App = (props) => {
         <SpeedDial
           ariaLabel="SpeedDial basic example"
           className='speed-dial'
-          // sx={{ position: 'absolute', bottom: 16, right: 16 }}
           icon={<SpeedDialIcon />}
+          FabProps={{
+            sx: {
+              bgcolor: '#f72585',
+              '&:hover': {
+                bgcolor: '#4cc9f0'
+              }
+            }
+          }}
         >
           {actions.map((action) => (
             <SpeedDialAction
@@ -105,6 +112,11 @@ const App = (props) => {
               key={action.name}
               icon={action.icon}
               tooltipTitle={action.name}
+              FabProps={{
+                sx: {
+                  color: '#f72585'
+                }
+              }}
             />
           ))}
         </SpeedDial>

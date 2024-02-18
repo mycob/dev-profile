@@ -29,7 +29,7 @@
 
 .speed-dial {
   position: fixed;
-  bottom: 10vh;
+  bottom: 15vh;
   right: 5vw;
 }
 
@@ -88,5 +88,12 @@
 @media (min-width: 1205px ) {
   .approve-it-images {
     width: 1000px !important;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .speed-dial {
+    position: fixed;
+    right: 15vw;
   }
 }
