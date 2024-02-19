@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import '../App.css';
+import { trackEvent } from '../utils/analytics';
 
 const HeaderComponent = () => {
 
@@ -22,18 +23,26 @@ const HeaderComponent = () => {
 
                 <Grid container spacing={2} style={{ marginBottom: 20}}>
                     <Grid item xs={12} md={6} lg={3}>
-                    <a className='bio-links' href="https://www.youtube.com/@code_hackery" target="_blank">
+                    <a onClick={() => trackEvent('youtube_clicked')} 
+                        className='bio-links' href="https://www.youtube.com/@code_hackery" target="_blank"
+                    >
                         <Item className='link-item'>YouTube Channel</Item>
                     </a>
                     </Grid>
                     <Grid item xs={12} md={6} lg={3}>
-                    <a className='bio-links' href="https://github.com/mycoberago" target="_blank"><Item className='link-item'>GitHub</Item></a>
+                    <a onClick={() => trackEvent('github_clicked')}
+                        className='bio-links' href="https://github.com/mycoberago" target="_blank"
+                    ><Item className='link-item'>GitHub</Item></a>
                     </Grid>
                     <Grid item xs={12} md={6} lg={3}>
-                    <a className='bio-links' href="https://www.linkedin.com/in/mikeberago/" target="_blank"><Item className='link-item'>Linkedin</Item></a>
+                    <a onClick={() => trackEvent('linkedin_clicked')}
+                        className='bio-links' href="https://www.linkedin.com/in/mikeberago/" target="_blank"
+                    ><Item className='link-item'>Linkedin</Item></a>
                     </Grid>
                     <Grid item xs={12} md={6} lg={3}>
-                    <a className='bio-links' href="mailto:mycoberago@gmail.com" target="_blank"><Item className='link-item'>Contact</Item></a>
+                    <a onClick={() => trackEvent('contact_clicked')}
+                        className='bio-links' href="mailto:mycoberago@gmail.com" target="_blank"
+                    ><Item className='link-item'>Contact</Item></a>
                     </Grid>
                 </Grid>
         </>

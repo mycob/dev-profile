@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
 import { Routes, Route, useNavigate} from "react-router-dom";
 import Loader from './app/loader.component';
@@ -24,6 +24,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import WorkIcon from '@mui/icons-material/Work';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import { trackEvent } from './utils/analytics';
 //node 12.18.3
 
 const actions = [
@@ -38,6 +39,7 @@ const App = (props) => {
   const navigate = useNavigate();
 
   const handleRoute = (route) => {
+    trackEvent(`${route}_navigated`);
     if(route === 'Home') {
       return navigate('/');
     }
