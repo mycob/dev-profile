@@ -1,5 +1,6 @@
 import { analytics } from "../config/firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 export function trackEvent(event) {
-  analytics.logEvent(event);
+  logEvent(analytics, event);
 }
