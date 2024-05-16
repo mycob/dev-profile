@@ -13,6 +13,7 @@ const FunilyComponent = lazy(() => import('./app/workLinks/funily.component'));
 const AppScriptComponent = lazy(() => import('./app/workLinks/appscript.component'));
 const TeachWithAIComponent = lazy(() => import('./app/workLinks/teach-w-ai.component'));
 const CertsComponent = lazy(() => import('./app/certificates.component'));
+const ToolsComponent = lazy(() => import('./app/tools.component'));
 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -24,12 +25,14 @@ import InfoIcon from '@mui/icons-material/Info';
 import WorkIcon from '@mui/icons-material/Work';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import HandymanIcon from '@mui/icons-material/Handyman';
 import { trackEvent } from './utils/analytics';
 //node 12.18.3
 
 const actions = [
   { icon: <HomeIcon />, name: 'Home' },
-  { icon: <InfoIcon />,name: 'About' },
+  { icon: <InfoIcon />, name: 'About' },
+  { icon: <HandymanIcon />,name: 'Toolbelt' },
   { icon: <WorkIcon />,name: 'Work' },
   { icon: <LocalLibraryIcon />,name: 'Certs' },
   { icon: <AccountTreeIcon />,name: 'Projects' },
@@ -68,6 +71,9 @@ const App = (props) => {
             />
             <Route path="/about" 
               element={<Suspense fallback={<Loader />}><AboutComponent /></Suspense>}
+            />
+            <Route path="/toolbelt" 
+              element={<Suspense fallback={<Loader />}><ToolsComponent /></Suspense>}
             />
             <Route path="/work" 
               element={<Suspense fallback={<Loader />}><WorkComponent /></Suspense>} 

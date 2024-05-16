@@ -19,7 +19,7 @@ const HeaderComponent = () => {
     return (
         <>
             <Typography variant="h4" align='center' >Myco Berago</Typography>
-                <Typography variant='h5' align='center' gutterBottom>Web and Mobile Software Developer</Typography>
+                <Typography variant='h5' align='center' gutterBottom>Fullstack Software Engineer</Typography>
 
                 <Grid container spacing={2} style={{ marginBottom: 20}}>
                     <Grid item xs={12} md={6} lg={3}>

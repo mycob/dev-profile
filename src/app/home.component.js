@@ -1,6 +1,7 @@
 import React, { lazy,Suspense } from 'react';
 import Box from '@mui/material/Box';
 import Loader from './loader.component';
+import ToolsComponent from './tools.component';
 
 const AboutComponent = lazy(() => import('./about.component'));
 const WorkComponent = lazy(() => import('./work.component'));
@@ -14,6 +15,8 @@ const HomeComponent = () => {
 			
 			  <Suspense fallback={<Loader />}>
 				<AboutComponent />
+
+				<ToolsComponent />
 
 				<WorkComponent />
 
