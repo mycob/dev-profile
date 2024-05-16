@@ -18,7 +18,7 @@ const HeaderComponent = () => {
 
     return (
         <>
-            <Typography variant="h4" align='center' >Mike Berago</Typography>
+            <Typography variant="h4" align='center' >Myco Berago</Typography>
                 <Typography variant='h5' align='center' gutterBottom>Web and Mobile Software Developer</Typography>
 
                 <Grid container spacing={2} style={{ marginBottom: 20}}>
@@ -31,12 +31,12 @@ const HeaderComponent = () => {
                     </Grid>
                     <Grid item xs={12} md={6} lg={3}>
                     <a onClick={() => trackEvent('github_clicked')}
-                        className='bio-links' href="https://github.com/mycoberago" target="_blank"
+                        className='bio-links' href="https://github.com/mycob" target="_blank"
                     ><Item className='link-item'>GitHub</Item></a>
                     </Grid>
                     <Grid item xs={12} md={6} lg={3}>
                     <a onClick={() => trackEvent('linkedin_clicked')}
-                        className='bio-links' href="https://www.linkedin.com/in/mikeberago/" target="_blank"
+                        className='bio-links' href="https://www.linkedin.com/in/mycoberago/" target="_blank"
                     ><Item className='link-item'>Linkedin</Item></a>
                     </Grid>
                     <Grid item xs={12} md={6} lg={3}>
