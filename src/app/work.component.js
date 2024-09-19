@@ -10,11 +10,14 @@ const WorkComponent = () => {
 		<Box 
 		sx={{ flexGrow: 1, marginTop: 5, marginBottom: 5 }}
 		>
-			<Typography id='work' variant='h4'>Start Up Projects</Typography>
+			<Typography id='work' variant='h4'>Experience</Typography>
 			<Typography>
 				Teach w/ AI, Manage iT, Approve iT and Funily are SaaS products that I developed in the past 7 years through my LLC.
 			</Typography>
 			<ul id='work-list'>
+				<li>
+					2024-Present | Software Engineer | Costco Wholesale Corporation	
+				</li>
 				<li>
 					2023-Present | <a href='/teach-with-ai'>Teach w/ AI
 					<OpenInNewIcon color='primary' sx={{ fontSize: "0.9em", marginLeft: 0.5 }} />
